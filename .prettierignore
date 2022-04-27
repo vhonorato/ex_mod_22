@@ -1,0 +1,16 @@
+# Add files here to ignore them from prettier formatting
+
+# compiled output
+/dist
+/.build
+/tmp
+/out-tsc
+/coverage
+
+# dependencies
+/node_modules
+
+# Workspace
+package.json
+*/**/tsconfig.*
+
