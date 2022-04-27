@@ -1,6 +1,6 @@
 # Module 22
 
-Nutrição nunca foi tão fácil
+Projeto desenvolvido para o curso de Profissão: Engenheiro de Qualidade de Software 
 
 ## Getting Started
 
