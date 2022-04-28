@@ -11,7 +11,15 @@ describe('Checkout', () => {
     myAccountPage.title.should('have.text', appString.myAccount)
 
     cy.goToCheckOut()
-    cy.fillCheckoutFieldsAndBuy()
+    cy.fillCheckoutFieldsAndBuy({
+      firstName: user.randomFirstName,
+      lastName: user.randomLastName,
+      address: user.randomAddress,
+      city: user.randomCity,
+      zipCode: user.randomZipCode,
+      phone: user.randomPhone,
+      email: user.randomEmail,
+    })
 
     successCheckoutPage.title.should('have.text', appString.orderReceived)
   })

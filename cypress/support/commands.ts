@@ -1,8 +1,25 @@
 /// <reference types="Cypress" />
+
 declare namespace Cypress {
   interface Chainable<Subject = any> {
     register(email: string, password: string): Chainable<any>
-    fillCheckoutFieldsAndBuy(): Chainable<any>
+    fillCheckoutFieldsAndBuy({
+      firstName,
+      lastName,
+      address,
+      city,
+      zipCode,
+      phone,
+      email,
+    }: {
+      firstName: string
+      lastName: string
+      address: string
+      city: string
+      zipCode: string
+      phone: string
+      email: string
+    }): Chainable<string>
     chooseItem(): Chainable<any>
     goToCheckOut(): Chainable<any>
   }
@@ -25,16 +42,36 @@ Cypress.Commands.add('register', (email: string, password: string) => {
   cy.visit('/minha-conta/')
 })
 
-Cypress.Commands.add('fillCheckoutFieldsAndBuy', () => {
-  cy.get('#billing_first_name').type('Vinicius').wait(100)
-  cy.get('#billing_last_name').type('Honorato').wait(100)
-  cy.get('#billing_address_1').type('Rua dos bobos').wait(100)
-  cy.get('#billing_city').type('São Paulo').wait(100)
-  cy.get('#billing_postcode').type('03435060').wait(100)
-  cy.get('#billing_phone').type('11999999999').wait(100)
-  cy.get('#terms').click().wait(100)
-  cy.get('#place_order').click().wait(5000)
-})
+Cypress.Commands.add(
+  'fillCheckoutFieldsAndBuy',
+  ({
+    firstName,
+    lastName,
+    address,
+    city,
+    zipCode,
+    phone,
+    email,
+  }: {
+    firstName: string
+    lastName: string
+    address: string
+    city: string
+    zipCode: string
+    phone: string
+    email: string
+  }) => {
+    cy.get('#billing_first_name').type(firstName).wait(100)
+    cy.get('#billing_last_name').type(lastName).wait(100)
+    cy.get('#billing_address_1').type(address).wait(100)
+    cy.get('#billing_city').type(city).wait(100)
+    cy.get('#billing_postcode').type(zipCode).wait(100)
+    cy.get('#billing_phone').type(phone).wait(100)
+    cy.get('#billing_email').type(email).wait(100)
+    cy.get('#terms').click().wait(100)
+    cy.get('#place_order').click().wait(5000)
+  },
+)
 
 Cypress.Commands.add('chooseItem', () => {
   const fd = new FormData()
