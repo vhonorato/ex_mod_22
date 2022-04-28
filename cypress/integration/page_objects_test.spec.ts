@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-import {randomEmail, randomPassword} from '../fixtures/user';
+import { user } from '../fixtures/index'
 import {registerPage, myAccountPage} from '../support/pages/index';
 
 describe("Register", () => {
@@ -7,7 +7,7 @@ describe("Register", () => {
     cy.visit("/my-account");
   });
   it("should register with valid credentials", () => {
-    registerPage.register(randomEmail, randomPassword);
+    registerPage.register(user.randomEmail, user.randomPassword);
 
     myAccountPage.title.should("be.visible");
 
