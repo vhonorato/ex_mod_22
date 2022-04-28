@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "docker:build": "docker build -t ex_mod_22 .",
+    "docker:run": "docker run --rm --name mod-22-cy mod-22-cypress:latest",
     "cy:open": "yarn run cypress open",
     "cy:test": "yarn run cypress run"
   },

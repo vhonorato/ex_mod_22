@@ -12,6 +12,8 @@ Projeto desenvolvido para o curso de Profissão: Engenheiro de Qualidade de Soft
 - `yarn`: Install project dependencies.
 - `yarn cy:open`: Start Cypress.
 - `yarn cy:test`: Start Cypress headless.
+- `yarn docker:build`: Build a docker image.
+- `yarn docker:run`: Run tests on container.
 
 
 ## Commit Messages
