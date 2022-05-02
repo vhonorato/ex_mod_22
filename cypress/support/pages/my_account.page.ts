@@ -1,7 +1,7 @@
 class MyAccountPage {
   get title() {
-    return cy.get(".page-title");
+    return cy.get('.page-title')
   }
 }
 
-export default new MyAccountPage();
+export default new MyAccountPage()

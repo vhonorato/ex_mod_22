@@ -1,7 +1,7 @@
 class SuccessCheckoutPage {
-    get title() {
-      return cy.get(".page-title");
-    }
+  get title() {
+    return cy.get('.page-title')
   }
-  
-  export default new SuccessCheckoutPage();
+}
+
+export default new SuccessCheckoutPage()

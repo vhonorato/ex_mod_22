@@ -5,8 +5,8 @@ class User {
   randomLastName = faker.name.lastName()
   randomEmail = faker.internet.email(this.randomFirstName.toLowerCase(), this.randomLastName.toLowerCase())
   randomPassword = faker.internet.password()
-  randomPhone = faker.phone.phoneNumber("+55###########")
-  randomZipCode = faker.address.zipCode("########")
+  randomPhone = faker.phone.phoneNumber('+55###########')
+  randomZipCode = faker.address.zipCode('########')
   randomAddress = faker.address.streetName()
   randomCity = faker.address.cityName()
 }

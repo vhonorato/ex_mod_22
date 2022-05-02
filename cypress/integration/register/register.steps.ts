@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { Given, When,And, Then } from 'cypress-cucumber-preprocessor/steps'
+import { Given, When, And, Then } from 'cypress-cucumber-preprocessor/steps'
 import { registerPage, myAccountPage } from '../../support/pages/index'
 import { user, appString } from '../../fixtures/index'
 
