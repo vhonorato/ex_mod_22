@@ -24,7 +24,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          install-command: yarn add
+          install-command: yarn install --frozen-lockfile --non-interactive
           browser: chrome
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
