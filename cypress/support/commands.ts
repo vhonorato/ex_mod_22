@@ -1,30 +1,46 @@
 /// <reference types="Cypress" />
 
-declare namespace Cypress {
-  interface Chainable<Subject = any> {
-    register(email: string, password: string): Chainable<any>
-    fillCheckoutFieldsAndBuy({
-      firstName,
-      lastName,
-      address,
-      city,
-      zipCode,
-      phone,
-      email,
-    }: {
-      firstName: string
-      lastName: string
-      address: string
-      city: string
-      zipCode: string
-      phone: string
-      email: string
-    }): Chainable<string>
-    chooseItem(): Chainable<any>
-    goToCheckOut(): Chainable<any>
+import { homePage, productSearchPage, productPage, cartPage } from '../support/pages'
+
+declare global {
+  namespace Cypress {
+    interface Chainable<Subject = any> {
+      register(email: string, password: string): Chainable<any>
+      fillCheckoutFieldsAndBuy({
+        firstName,
+        lastName,
+        address,
+        city,
+        zipCode,
+        phone,
+        email,
+      }: {
+        firstName: string
+        lastName: string
+        address: string
+        city: string
+        zipCode: string
+        phone: string
+        email: string
+      }): Chainable<string>
+      chooseItem(): Chainable<any>
+      goToCheckOut(): Chainable<any>
+      removeProductFromCart({ label, message }: { label: string; message: string }): Chainable<any>
+      addProductToCart({
+        search,
+        color,
+        size,
+        message,
+      }: {
+        search: string
+        color: string
+        size: string
+        message: string
+      }): Chainable<any>
+      interceptTerm({ term, data }: { term: string; data: Array<any> }): Chainable<any>
+    }
   }
 }
-
 Cypress.Commands.add('register', (email: string, password: string) => {
   const fd = new FormData()
 
@@ -96,3 +112,54 @@ Cypress.Commands.add('goToCheckOut', () => {
     '#cart > .dropdown-menu > .widget_shopping_cart_content > .mini_cart_content > .mini_cart_inner > .mcart-border > .buttons > .checkout',
   ).click()
 })
+
+Cypress.Commands.add('interceptTerm', ({ term, data }: { term: string; data: Array<any> }) => {
+  cy.intercept(
+    {
+      method: 'GET',
+      url: '/wp-admin/admin-ajax*',
+      query: {
+        term: term,
+      },
+    },
+    (req) => {
+      req.reply({
+        statusCode: 200,
+        body: `${req.query.callback}(
+            ${JSON.stringify(data)} 
+          )`,
+      })
+    },
+  )
+})
+
+Cypress.Commands.add(
+  'addProductToCart',
+  ({
+    search,
+    color,
+    size,
+    message,
+  }: {
+    search: string
+    color: string
+    size: string
+    message: string
+  }) => {
+    homePage.searchMagnifier()
+    productSearchPage.search(search)
+    productSearchPage.productList.first().should('have.attr', 'title', search)
+    productSearchPage.search('{enter}')
+    productPage.selectSizeColorSubmit({ color: color, size: size })
+    productPage.successMessage({ product: search, text: message })
+    homePage.homePage()
+  },
+)
+Cypress.Commands.add(
+  'removeProductFromCart',
+  ({ label, message }: { label: string; message: string }) => {
+    cy.visit('/carrinho')
+    cartPage.removeProduct()
+    productPage.successMessage({ product: label, text: message })
+  },
+)

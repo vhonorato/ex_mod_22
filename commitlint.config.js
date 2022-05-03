@@ -11,6 +11,10 @@ module.exports = {
     'subject-full-stop': [2, 'never', '.'],
     'type-case': [2, 'always', 'lower-case'],
     'type-empty': [2, 'never'],
-    'type-enum': [2, 'always', ['chore', 'ci', 'docs', 'feat', 'fix', 'perf', 'ref', 'rev', 'style', 'test']],
+    'type-enum': [
+      2,
+      'always',
+      ['chore', 'ci', 'docs', 'feat', 'fix', 'perf', 'ref', 'rev', 'style', 'test'],
+    ],
   },
 }
