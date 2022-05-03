@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-05-03T22:06:18.684Z",
-    "end": "2022-05-03T22:06:42.692Z",
-    "duration": 24008,
+    "start": "2022-05-03T22:17:56.823Z",
+    "end": "2022-05-03T22:18:17.505Z",
+    "duration": 20682,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "45165875-eb4c-44f6-b2c3-9fc98a30dff5",
+      "uuid": "ac805b4d-b114-4e07-a2ba-ae5f1ab1282b",
       "title": "",
       "fullFile": "cypress/integration/app_actions_test.spec.ts",
       "file": "cypress/integration/app_actions_test.spec.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c33d72d6-5d03-4bad-b88a-df063cded336",
+          "uuid": "320e8613-2149-4695-a87e-ed7b1dde0044",
           "title": "Checkout",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should add a item in checkout and buy it with bank transfer",
               "fullTitle": "Checkout should add a item in checkout and buy it with bank transfer",
               "timedOut": null,
-              "duration": 23905,
+              "duration": 20619,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "index_2.myAccountPage.title.should('have.text', index_1.appString.myAccount);\ncy.goToCheckOut();\ncy.fillCheckoutFieldsAndBuy({\n    firstName: index_1.user.randomFirstName,\n    lastName: index_1.user.randomLastName,\n    address: index_1.user.randomAddress,\n    city: index_1.user.randomCity,\n    zipCode: index_1.user.randomZipCode,\n    phone: index_1.user.randomPhone,\n    email: index_1.user.randomEmail,\n});\nindex_2.successCheckoutPage.title.should('have.text', index_1.appString.orderReceived);",
               "err": {},
-              "uuid": "41c05c0a-9da9-4d77-8567-938d7d6e9ff0",
-              "parentUUID": "c33d72d6-5d03-4bad-b88a-df063cded336",
+              "uuid": "fe5d736b-c283-4b9e-ae26-fc4424e01a57",
+              "parentUUID": "320e8613-2149-4695-a87e-ed7b1dde0044",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "41c05c0a-9da9-4d77-8567-938d7d6e9ff0"
+            "fe5d736b-c283-4b9e-ae26-fc4424e01a57"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 23905,
+          "duration": 20619,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
