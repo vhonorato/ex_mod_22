@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-03T22:06:18.684Z",
+    "end": "2022-05-03T22:06:42.692Z",
+    "duration": 24008,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "45165875-eb4c-44f6-b2c3-9fc98a30dff5",
+      "title": "",
+      "fullFile": "cypress/integration/app_actions_test.spec.ts",
+      "file": "cypress/integration/app_actions_test.spec.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c33d72d6-5d03-4bad-b88a-df063cded336",
+          "title": "Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a item in checkout and buy it with bank transfer",
+              "fullTitle": "Checkout should add a item in checkout and buy it with bank transfer",
+              "timedOut": null,
+              "duration": 23905,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "index_2.myAccountPage.title.should('have.text', index_1.appString.myAccount);\ncy.goToCheckOut();\ncy.fillCheckoutFieldsAndBuy({\n    firstName: index_1.user.randomFirstName,\n    lastName: index_1.user.randomLastName,\n    address: index_1.user.randomAddress,\n    city: index_1.user.randomCity,\n    zipCode: index_1.user.randomZipCode,\n    phone: index_1.user.randomPhone,\n    email: index_1.user.randomEmail,\n});\nindex_2.successCheckoutPage.title.should('have.text', index_1.appString.orderReceived);",
+              "err": {},
+              "uuid": "41c05c0a-9da9-4d77-8567-938d7d6e9ff0",
+              "parentUUID": "c33d72d6-5d03-4bad-b88a-df063cded336",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "41c05c0a-9da9-4d77-8567-938d7d6e9ff0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23905,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "index.html",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "reportFilename": "index.html",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
