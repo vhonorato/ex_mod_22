@@ -33,7 +33,7 @@ describe('Intercept', () => {
     it('remove products from shopping cart', () => {
       cy.removeProductFromCart({ label: products.label, message: appString.removeFromCart })
     })
-    it.only('update products from shopping cart', () => {
+    it('update products from shopping cart', () => {
       cy.visit('/carrinho')
       cartPage.addProduct()
     })
