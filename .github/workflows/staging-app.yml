@@ -27,10 +27,16 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          command: yarn cy:test
+          command: yarn run cypress run
           browser: chrome
-          
-      - name: Publish Report
+      
+      - name: Merge JSON
+        run: yarn mocha:merge
+
+      - name: Create report
+        run: yarn mocha:marge
+
+      - name: Publish report
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
