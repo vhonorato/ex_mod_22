@@ -92,11 +92,11 @@ Cypress.Commands.add(
 Cypress.Commands.add('chooseItem', () => {
   const fd = new FormData()
   fd.append('attribute_size', ' XL')
-  fd.append('attribute_color', ' Green')
+  fd.append('attribute_color', ' Red')
   fd.append('quantity', ' 1')
   fd.append('add-to-cart', ' 2559')
   fd.append('product_id', ' 2559')
-  fd.append('variation_id', ' 2578')
+  fd.append('variation_id', ' 2579')
 
   cy.request({
     url: '/product/abominable-hoodie/',
@@ -107,10 +107,7 @@ Cypress.Commands.add('chooseItem', () => {
 
 Cypress.Commands.add('goToCheckOut', () => {
   cy.get('#primary-menu > .menu-item-629 > a').click()
-  cy.get('#cart > .dropdown-toggle').click()
-  cy.get(
-    '#cart > .dropdown-menu > .widget_shopping_cart_content > .mini_cart_content > .mini_cart_inner > .mcart-border > .buttons > .checkout',
-  ).click()
+  cy.visit('/checkout/')
 })
 
 Cypress.Commands.add('interceptTerm', ({ term, data }: { term: string; data: Array<any> }) => {
