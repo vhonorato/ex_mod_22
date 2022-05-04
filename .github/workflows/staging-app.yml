@@ -21,11 +21,15 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --non-interactive
+
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          install-command: yarn install --frozen-lockfile --non-interactive
+          command: yarn cy:test
           browser: chrome
+          
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
         with:
