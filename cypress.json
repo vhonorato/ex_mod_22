@@ -4,7 +4,7 @@
   "projectId": "EBAC",
   "reporter": "mochawesome",
   "reporterOptions": {
-      "reportDir": "cypress/results",
+      "reportDir": "./cypress/results/mochawesome",
       "reportFilename": "index.html",
       "overwrite": false,
       "html": true,
