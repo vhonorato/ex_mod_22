@@ -34,7 +34,7 @@ jobs:
         run: yarn mocha:merge
 
       - name: Create report
-        run: yarn mocha:marge
+        run: yarn mocha:marge:ci
 
       - name: Publish report
         uses: peaceiris/actions-gh-pages@v3

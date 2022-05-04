@@ -9,6 +9,7 @@
     "cy:open": "yarn run cypress open",
     "mocha:merge":"yarn mochawesome-merge ./cypress/results/mochawesome/*.json -o ./cypress/results/mochawesome/index.json",
     "mocha:marge":"yarn marge ./cypress/results/mochawesome/index.json && mv ./mochawesome-report/cypress/results/mochawesome/index.html ./cypress/results/mochawesome && rm -rf ./mochawesome-report",
+    "mocha:marge:ci":"yarn marge ./cypress/results/mochawesome/index.json && mv ./mochawesome-report/index.html ./cypress/results/mochawesome && rm -rf ./mochawesome-report",
     "cy:test": "yarn run cypress run && yarn mocha:merge && yarn mocha:marge",
     "cy:test:allure": "yarn cypress run --env allure=true",
     "cy:sorry": "yarn cy2 run --record --key EBAC --parallel --ci-build-id `date +%s`",
