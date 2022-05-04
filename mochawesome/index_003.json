@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-05-03T22:21:15.212Z",
-    "end": "2022-05-03T22:21:23.710Z",
-    "duration": 8498,
+    "start": "2022-05-04T13:40:57.567Z",
+    "end": "2022-05-04T13:41:06.993Z",
+    "duration": 9426,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0bb7f050-98a2-4308-8fa6-2ccd1835dcd9",
+      "uuid": "755ac30a-412e-4bd6-9d31-c0cf7f7cfe62",
       "title": "",
       "fullFile": "cypress/integration/register.feature",
       "file": "cypress/integration/register.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "279c1fb5-ebc7-42fd-b878-c84daccb89f0",
+          "uuid": "17bddb1f-3de7-479e-b977-9c3b70a18a85",
           "title": "Register",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Register with valid credentials (example #1)",
               "fullTitle": "Register Register with valid credentials (example #1)",
               "timedOut": null,
-              "duration": 8381,
+              "duration": 9363,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "17b65fb5-93a8-4340-91a4-bba625adb258",
-              "parentUUID": "279c1fb5-ebc7-42fd-b878-c84daccb89f0",
+              "uuid": "8eb33bb4-e0cf-460e-ad96-3456d716c6c3",
+              "parentUUID": "17bddb1f-3de7-479e-b977-9c3b70a18a85",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "17b65fb5-93a8-4340-91a4-bba625adb258"
+            "8eb33bb4-e0cf-460e-ad96-3456d716c6c3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8381,
+          "duration": 9363,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -94,7 +94,7 @@
     },
     "marge": {
       "options": {
-        "reportDir": "cypress/results",
+        "reportDir": "./cypress/results/mochawesome",
         "reportFilename": "index.html",
         "overwrite": false,
         "html": true,

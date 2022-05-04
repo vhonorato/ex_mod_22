@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-05-03T22:20:51.381Z",
-    "end": "2022-05-03T22:21:00.694Z",
-    "duration": 9313,
+    "start": "2022-05-04T13:40:35.104Z",
+    "end": "2022-05-04T13:40:44.727Z",
+    "duration": 9623,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f112f01f-566c-448e-9354-75261e172ecf",
+      "uuid": "017b943f-8ea3-4fb8-85a3-338a976d84c1",
       "title": "",
       "fullFile": "cypress/integration/page_objects_test.spec.ts",
       "file": "cypress/integration/page_objects_test.spec.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2f13712a-d6f7-4887-819b-58363e94c9f3",
+          "uuid": "45c23210-ae67-4494-b6a2-738cc6872d75",
           "title": "Register",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should register with valid credentials",
               "fullTitle": "Register should register with valid credentials",
               "timedOut": null,
-              "duration": 9225,
+              "duration": 9535,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "index_2.registerPage.register(index_1.user.randomEmail, index_1.user.randomPassword);\nindex_2.myAccountPage.title.should('be.visible');",
               "err": {},
-              "uuid": "07b0a247-b99e-4b31-befc-7b8d43388305",
-              "parentUUID": "2f13712a-d6f7-4887-819b-58363e94c9f3",
+              "uuid": "8da2870a-f102-4640-8883-c24a29c2830d",
+              "parentUUID": "45c23210-ae67-4494-b6a2-738cc6872d75",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "07b0a247-b99e-4b31-befc-7b8d43388305"
+            "8da2870a-f102-4640-8883-c24a29c2830d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9225,
+          "duration": 9535,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -94,7 +94,7 @@
     },
     "marge": {
       "options": {
-        "reportDir": "cypress/results",
+        "reportDir": "./cypress/results/mochawesome",
         "reportFilename": "index.html",
         "overwrite": false,
         "html": true,
