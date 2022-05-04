@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-05-04T21:11:40.911Z",
-    "end": "2022-05-04T21:11:53.825Z",
-    "duration": 12914,
+    "start": "2022-05-04T23:01:58.154Z",
+    "end": "2022-05-04T23:02:13.803Z",
+    "duration": 15649,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3d08bf38-2a1f-4882-9e7c-63530dc58bb1",
+      "uuid": "cbdfd622-ee30-4a7c-adaf-b122b6c845d9",
       "title": "",
       "fullFile": "cypress/integration/page_objects_test.spec.ts",
       "file": "cypress/integration/page_objects_test.spec.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "53c843d7-9f0c-4f71-be98-49d232625bc0",
+          "uuid": "87538065-44ec-4ba4-b30e-fe5666199fda",
           "title": "Register",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should register with valid credentials",
               "fullTitle": "Register should register with valid credentials",
               "timedOut": null,
-              "duration": 12653,
+              "duration": 15425,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "index_2.registerPage.register(index_1.user.randomEmail, index_1.user.randomPassword);\nindex_2.myAccountPage.title.should('be.visible');",
               "err": {},
-              "uuid": "5fc54edf-cb10-492a-a4d3-9445f33e2681",
-              "parentUUID": "53c843d7-9f0c-4f71-be98-49d232625bc0",
+              "uuid": "e8ef7a55-c843-4963-ae3e-ee051e86afe3",
+              "parentUUID": "87538065-44ec-4ba4-b30e-fe5666199fda",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5fc54edf-cb10-492a-a4d3-9445f33e2681"
+            "e8ef7a55-c843-4963-ae3e-ee051e86afe3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12653,
+          "duration": 15425,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

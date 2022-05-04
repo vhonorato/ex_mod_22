@@ -5,9 +5,9 @@
     "passes": 6,
     "pending": 0,
     "failures": 0,
-    "start": "2022-05-04T21:06:29.002Z",
-    "end": "2022-05-04T21:12:37.605Z",
-    "duration": 233158,
+    "start": "2022-05-04T22:56:07.969Z",
+    "end": "2022-05-04T23:03:02.583Z",
+    "duration": 263453,
     "testsRegistered": 6,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d0fa1cce-ed93-4272-8d8b-1edbd406b98f",
+      "uuid": "8a1e5219-d0e9-48d7-a89d-2a7175158c42",
       "title": "",
       "fullFile": "cypress/integration/app_actions_test.spec.ts",
       "file": "cypress/integration/app_actions_test.spec.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c66d859f-9377-41ce-95d6-a956b9b0777c",
+          "uuid": "39f67977-531d-4775-8efe-f1fffb920df4",
           "title": "Checkout",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should add a item in checkout and buy it with bank transfer",
               "fullTitle": "Checkout should add a item in checkout and buy it with bank transfer",
               "timedOut": null,
-              "duration": 29557,
+              "duration": 30098,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "index_2.myAccountPage.title.should('have.text', index_1.appString.myAccount);\ncy.goToCheckOut();\ncy.fillCheckoutFieldsAndBuy({\n    firstName: index_1.user.randomFirstName,\n    lastName: index_1.user.randomLastName,\n    address: index_1.user.randomAddress,\n    city: index_1.user.randomCity,\n    zipCode: index_1.user.randomZipCode,\n    phone: index_1.user.randomPhone,\n    email: index_1.user.randomEmail,\n});\nindex_2.successCheckoutPage.title.should('have.text', index_1.appString.orderReceived);",
               "err": {},
-              "uuid": "16a8d06b-2177-4b01-be45-a89fd63ddafe",
-              "parentUUID": "c66d859f-9377-41ce-95d6-a956b9b0777c",
+              "uuid": "d2895c96-391d-4347-a64f-09780838338a",
+              "parentUUID": "39f67977-531d-4775-8efe-f1fffb920df4",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "16a8d06b-2177-4b01-be45-a89fd63ddafe"
+            "d2895c96-391d-4347-a64f-09780838338a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 29557,
+          "duration": 30098,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -76,7 +76,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "6e9de6ec-9d4b-4964-8a1c-0bf12f20c8ac",
+      "uuid": "29b18dc6-bc3a-428f-bc9b-d9a5da08fc65",
       "title": "",
       "fullFile": "cypress/integration/intercept_test.spec.ts",
       "file": "cypress/integration/intercept_test.spec.ts",
@@ -85,7 +85,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ed7f3d43-ea46-4844-8ad3-6362c9c161cb",
+          "uuid": "b6d0a94c-a80c-483e-9427-dd061289d732",
           "title": "Intercept",
           "fullFile": "",
           "file": "",
@@ -96,7 +96,7 @@
               "title": "add products to shopping cart",
               "fullTitle": "Intercept add products to shopping cart",
               "timedOut": null,
-              "duration": 127430,
+              "duration": 143431,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -105,15 +105,15 @@
               "context": null,
               "code": "search_data_json_1.default.search_data.forEach(function (item) {\n    cy.addProductToCart({\n        search: item.label,\n        color: item.color,\n        size: item.size,\n        message: index_1.appString.addToCart,\n    });\n});",
               "err": {},
-              "uuid": "5380f587-b960-483e-8507-9eeb116314fe",
-              "parentUUID": "ed7f3d43-ea46-4844-8ad3-6362c9c161cb",
+              "uuid": "5e7d841d-1ad1-4536-b9d8-eb55e646d622",
+              "parentUUID": "b6d0a94c-a80c-483e-9427-dd061289d732",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [
             {
-              "uuid": "af51e6e7-0bc2-4298-8090-6cb73368ba7e",
+              "uuid": "3926bb4e-5b6d-453f-bff4-e8d58568367a",
               "title": "Shopping Cart",
               "fullFile": "",
               "file": "",
@@ -124,7 +124,7 @@
                   "title": "remove products from shopping cart",
                   "fullTitle": "Intercept Shopping Cart remove products from shopping cart",
                   "timedOut": null,
-                  "duration": 27581,
+                  "duration": 30984,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -133,8 +133,8 @@
                   "context": null,
                   "code": "cy.removeProductFromCart({ label: products.label, message: index_1.appString.removeFromCart });",
                   "err": {},
-                  "uuid": "c4a2427b-84e2-4977-a752-ee7fabb54e42",
-                  "parentUUID": "af51e6e7-0bc2-4298-8090-6cb73368ba7e",
+                  "uuid": "205270d6-a9e6-4f1d-83a0-e2a1096199f2",
+                  "parentUUID": "3926bb4e-5b6d-453f-bff4-e8d58568367a",
                   "isHook": false,
                   "skipped": false
                 },
@@ -142,7 +142,7 @@
                   "title": "update products from shopping cart",
                   "fullTitle": "Intercept Shopping Cart update products from shopping cart",
                   "timedOut": null,
-                  "duration": 24004,
+                  "duration": 29099,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -151,33 +151,33 @@
                   "context": null,
                   "code": "cy.visit('/carrinho');\npages_1.cartPage.addProduct();",
                   "err": {},
-                  "uuid": "c5f34447-b082-4bc6-a11a-01ff70003941",
-                  "parentUUID": "af51e6e7-0bc2-4298-8090-6cb73368ba7e",
+                  "uuid": "25643cf1-e738-4d99-bda3-23437d27fa6b",
+                  "parentUUID": "3926bb4e-5b6d-453f-bff4-e8d58568367a",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "c4a2427b-84e2-4977-a752-ee7fabb54e42",
-                "c5f34447-b082-4bc6-a11a-01ff70003941"
+                "205270d6-a9e6-4f1d-83a0-e2a1096199f2",
+                "25643cf1-e738-4d99-bda3-23437d27fa6b"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 51585,
+              "duration": 60083,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             }
           ],
           "passes": [
-            "5380f587-b960-483e-8507-9eeb116314fe"
+            "5e7d841d-1ad1-4536-b9d8-eb55e646d622"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 127430,
+          "duration": 143431,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -193,7 +193,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "3d08bf38-2a1f-4882-9e7c-63530dc58bb1",
+      "uuid": "cbdfd622-ee30-4a7c-adaf-b122b6c845d9",
       "title": "",
       "fullFile": "cypress/integration/page_objects_test.spec.ts",
       "file": "cypress/integration/page_objects_test.spec.ts",
@@ -202,7 +202,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "53c843d7-9f0c-4f71-be98-49d232625bc0",
+          "uuid": "87538065-44ec-4ba4-b30e-fe5666199fda",
           "title": "Register",
           "fullFile": "",
           "file": "",
@@ -213,7 +213,7 @@
               "title": "should register with valid credentials",
               "fullTitle": "Register should register with valid credentials",
               "timedOut": null,
-              "duration": 12653,
+              "duration": 15425,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -222,20 +222,20 @@
               "context": null,
               "code": "index_2.registerPage.register(index_1.user.randomEmail, index_1.user.randomPassword);\nindex_2.myAccountPage.title.should('be.visible');",
               "err": {},
-              "uuid": "5fc54edf-cb10-492a-a4d3-9445f33e2681",
-              "parentUUID": "53c843d7-9f0c-4f71-be98-49d232625bc0",
+              "uuid": "e8ef7a55-c843-4963-ae3e-ee051e86afe3",
+              "parentUUID": "87538065-44ec-4ba4-b30e-fe5666199fda",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5fc54edf-cb10-492a-a4d3-9445f33e2681"
+            "e8ef7a55-c843-4963-ae3e-ee051e86afe3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12653,
+          "duration": 15425,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -251,7 +251,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "9ab9aef2-b658-46b0-b348-a75c4d99fc14",
+      "uuid": "3511a0dd-7ea5-4e15-a76b-d92b905e64f4",
       "title": "",
       "fullFile": "cypress/integration/register.feature",
       "file": "cypress/integration/register.feature",
@@ -260,7 +260,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b6ad550f-fceb-48af-83db-a1d28fcc67c0",
+          "uuid": "b50b79a7-4d50-433f-ac4c-59a5bb223295",
           "title": "Register",
           "fullFile": "",
           "file": "",
@@ -271,7 +271,7 @@
               "title": "Register with valid credentials (example #1)",
               "fullTitle": "Register Register with valid credentials (example #1)",
               "timedOut": null,
-              "duration": 11933,
+              "duration": 14416,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -280,20 +280,20 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "2321b374-bd22-4d36-abf2-07ad30fcb8d1",
-              "parentUUID": "b6ad550f-fceb-48af-83db-a1d28fcc67c0",
+              "uuid": "b91a193c-1a84-40d1-82bd-a9e87bcad0ca",
+              "parentUUID": "b50b79a7-4d50-433f-ac4c-59a5bb223295",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2321b374-bd22-4d36-abf2-07ad30fcb8d1"
+            "b91a193c-1a84-40d1-82bd-a9e87bcad0ca"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11933,
+          "duration": 14416,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
