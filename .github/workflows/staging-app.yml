@@ -48,6 +48,7 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
           message: |
             **Author:** ${{ github.actor }}
             **Message:** ${{ github.event.commits[0].message }}
@@ -57,4 +58,3 @@ jobs:
             **See changes:** [here](https://github.com/${{ github.repository }}/commit/${{github.sha}})
 
             **See report:** [here](https://vhonorato.github.io/ex_mod_22/)
-            
