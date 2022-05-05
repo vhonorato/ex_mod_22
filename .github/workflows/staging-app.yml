@@ -48,13 +48,13 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          format: markdown
+          format: html
           message: |
-            \*Author:* ${{ github.actor }}
-            \*Message:* ${{ github.event.commits[0].message }}
+            <b>Author:</b> ${{ github.actor }}
+            <b>Message:</b> ${{ github.event.commits[0].message }}
             
-            \*Repository:* ${{ github.repository }}
+            <b>Repository:</b> ${{ github.repository }}
             
-            \*See changes:* [here](https://github.com/${{ github.repository }}/commit/${{github.sha}})
+            <b>See changes:</b> <a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">here</a>
 
-            \*See report:* [here](https://vhonorato.github.io/ex_mod_22/)
+            <b>See report:</b> <a href="https://vhonorato.github.io/ex_mod_22/">here</a>
