@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2022-05-05T05:14:42.996Z",
-    "end": "2022-05-05T05:17:27.057Z",
-    "duration": 164061,
+    "start": "2022-05-05T05:38:34.404Z",
+    "end": "2022-05-05T05:42:13.820Z",
+    "duration": 219416,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d8309511-b3c0-44af-a7ea-1e571f158c94",
+      "uuid": "d69d6288-840b-4527-be53-de4e45430358",
       "title": "",
       "fullFile": "cypress/integration/intercept_test.spec.ts",
       "file": "cypress/integration/intercept_test.spec.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "96333b91-c475-49bc-9e3c-61f1f916a701",
+          "uuid": "c8887157-ee23-4765-9f05-2bfb6b99c67e",
           "title": "Intercept",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "add products to shopping cart",
               "fullTitle": "Intercept add products to shopping cart",
               "timedOut": null,
-              "duration": 115947,
+              "duration": 156182,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,15 +47,15 @@
               "context": null,
               "code": "search_data_json_1.default.search_data.forEach(function (item) {\n    cy.addProductToCart({\n        search: item.label,\n        color: item.color,\n        size: item.size,\n        message: index_1.appString.addToCart,\n    });\n});",
               "err": {},
-              "uuid": "f08cc2b9-6261-45b5-9306-842df8cc7d96",
-              "parentUUID": "96333b91-c475-49bc-9e3c-61f1f916a701",
+              "uuid": "d89919d0-40f8-4105-b3a8-8d2b0a4a1f09",
+              "parentUUID": "c8887157-ee23-4765-9f05-2bfb6b99c67e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [
             {
-              "uuid": "aadf6f9e-edf4-4838-887d-2f0e3e75d6b7",
+              "uuid": "8edfb258-9ba9-4d9b-9b59-95cbbe80e787",
               "title": "Shopping Cart",
               "fullFile": "",
               "file": "",
@@ -66,7 +66,7 @@
                   "title": "remove products from shopping cart",
                   "fullTitle": "Intercept Shopping Cart remove products from shopping cart",
                   "timedOut": null,
-                  "duration": 24461,
+                  "duration": 32817,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -75,8 +75,8 @@
                   "context": null,
                   "code": "cy.removeProductFromCart({ label: products.label, message: index_1.appString.removeFromCart });",
                   "err": {},
-                  "uuid": "e51f1b43-2868-4d49-a0d2-a63858372579",
-                  "parentUUID": "aadf6f9e-edf4-4838-887d-2f0e3e75d6b7",
+                  "uuid": "92311a47-89ca-425e-80b8-ce8ded9a9d33",
+                  "parentUUID": "8edfb258-9ba9-4d9b-9b59-95cbbe80e787",
                   "isHook": false,
                   "skipped": false
                 },
@@ -84,7 +84,7 @@
                   "title": "update products from shopping cart",
                   "fullTitle": "Intercept Shopping Cart update products from shopping cart",
                   "timedOut": null,
-                  "duration": 23078,
+                  "duration": 29519,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -93,33 +93,33 @@
                   "context": null,
                   "code": "cy.visit('/carrinho');\npages_1.cartPage.addProduct();",
                   "err": {},
-                  "uuid": "55289629-970a-485c-a1c5-5686338f1baa",
-                  "parentUUID": "aadf6f9e-edf4-4838-887d-2f0e3e75d6b7",
+                  "uuid": "c1d97165-6384-4876-a519-4ebe0ae4283b",
+                  "parentUUID": "8edfb258-9ba9-4d9b-9b59-95cbbe80e787",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "e51f1b43-2868-4d49-a0d2-a63858372579",
-                "55289629-970a-485c-a1c5-5686338f1baa"
+                "92311a47-89ca-425e-80b8-ce8ded9a9d33",
+                "c1d97165-6384-4876-a519-4ebe0ae4283b"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 47539,
+              "duration": 62336,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             }
           ],
           "passes": [
-            "f08cc2b9-6261-45b5-9306-842df8cc7d96"
+            "d89919d0-40f8-4105-b3a8-8d2b0a4a1f09"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 115947,
+          "duration": 156182,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
