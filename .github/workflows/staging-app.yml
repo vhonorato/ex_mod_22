@@ -50,11 +50,11 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: markdown
           message: |
-            **Author:** ${{ github.actor }}
-            **Message:** ${{ github.event.commits[0].message }}
+            \*Author:* ${{ github.actor }}
+            \*Message:* ${{ github.event.commits[0].message }}
             
-            **Repository:** ${{ github.repository }}
+            \*Repository:* ${{ github.repository }}
             
-            **See changes:** [here](https://github.com/${{ github.repository }}/commit/${{github.sha}})
+            \*See changes:* [here](https://github.com/${{ github.repository }}/commit/${{github.sha}})
 
-            **See report:** [here](https://vhonorato.github.io/ex_mod_22/)
+            \*See report:* [here](https://vhonorato.github.io/ex_mod_22/)
