@@ -4,7 +4,7 @@ types:
   - fix
   - docs
   - dx
-  - refactor
+  - ref
   - perf
   - test
   - workflow
