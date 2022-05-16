@@ -65,7 +65,6 @@ jobs:
           record: true
           parallel: true
           browser: chrome
-          command: yarn run cypress run
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -81,7 +80,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14
-          
+
       - name: Merge JSON 📝
         run: yarn mocha:merge 
 
