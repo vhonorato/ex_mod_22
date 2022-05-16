@@ -56,7 +56,7 @@ jobs:
       - name: Download built folders ⏬
         uses: actions/download-artifact@v2
         with:
-          name: integration
+          name: built
 
       - name: Cypress tests 🧪
         uses: cypress-io/github-action@v3
