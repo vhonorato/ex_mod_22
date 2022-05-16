@@ -4,6 +4,7 @@
     "**/*.spec.ts",
     "**/*.feature"
   ],
+  "integrationFolder": "integration",
   "projectId": "fgunw9",
   "reporter": "mochawesome",
   "reporterOptions": {
