@@ -65,6 +65,7 @@ jobs:
           record: true
           parallel: true
           browser: chrome
+          command: yarn run cypress run
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
