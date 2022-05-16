@@ -74,6 +74,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: [install, cypress-run]
     steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Set up node 💻
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          
       - name: Merge JSON 📝
         run: yarn mocha:merge 
 
