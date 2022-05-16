@@ -7,10 +7,10 @@ jobs:
   install:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout 🛎️
+      - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: setup node 💻
+      - name: Set up node 💻
         uses: actions/setup-node@v3
         with:
           node-version: 14
@@ -45,10 +45,10 @@ jobs:
         containers: [1,2,3]
 
     steps: 
-      - name: checkout 🛎️
+      - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: setup node 💻
+      - name: Set up node 💻
         uses: actions/setup-node@v3
         with:
           node-version: 14
@@ -74,8 +74,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: [install, cypress-run]
     steps:
+      - name: Merge JSON 📝
+        run: yarn mocha:merge 
+
       - name: Create report 📝
-        run: yarn mocha:merge && yarn mocha:marge:ci
+        run: yarn mocha:marge:ci
 
       - name: Publish report 📈
         uses: peaceiris/actions-gh-pages@v3
