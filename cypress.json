@@ -1,13 +1,16 @@
 {
   "baseUrl": "http://lojaebac.ebaconline.art.br/",
-  "testFiles": ["**/*.spec.ts", "**/*.feature"],
-  "projectId": "EBAC",
+  "testFiles": [
+    "**/*.spec.ts",
+    "**/*.feature"
+  ],
+  "projectId": "fgunw9",
   "reporter": "mochawesome",
   "reporterOptions": {
-      "reportDir": "./cypress/results/mochawesome",
-      "reportFilename": "index.html",
-      "overwrite": false,
-      "html": true,
-      "json": true
-    }
+    "reportDir": "./cypress/results/mochawesome",
+    "reportFilename": "index.html",
+    "overwrite": false,
+    "html": true,
+    "json": true
+  }
 }

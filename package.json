@@ -7,6 +7,7 @@
     "docker:build": "docker build -t ex_mod_22 .",
     "docker:run": "docker run --rm --name mod-22-cy mod-22-cypress:latest",
     "cy:open": "yarn run cypress open",
+    "cy:record": "yarn run cypress run --record --key 7a45ac0f-d392-4fe5-beca-c0822df002a9",
     "mocha:merge":"yarn mochawesome-merge ./cypress/results/mochawesome/*.json -o ./cypress/results/mochawesome/index.json",
     "mocha:marge":"yarn marge ./cypress/results/mochawesome/index.json && mv ./mochawesome-report/cypress/results/mochawesome/index.html ./cypress/results/mochawesome && rm -rf ./mochawesome-report",
     "mocha:marge:ci":"yarn marge ./cypress/results/mochawesome/index.json && mv ./mochawesome-report/index.html ./cypress/results/mochawesome && rm -rf ./mochawesome-report",
