@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-05-05T13:09:49.065Z",
-    "end": "2022-05-05T13:10:01.383Z",
-    "duration": 12318,
+    "start": "2022-05-16T02:02:05.251Z",
+    "end": "2022-05-16T02:02:17.664Z",
+    "duration": 12413,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b50d97bb-2381-4e31-bb47-d0fc14043ab9",
+      "uuid": "028e4e4b-49c0-452f-b25d-9c3610abe51e",
       "title": "",
       "fullFile": "cypress/integration/register.feature",
       "file": "cypress/integration/register.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "df8d1aef-8413-48f4-8a3b-e9cb4c24852c",
+          "uuid": "7b07b991-554b-40a2-b9c2-07fd0b95a8fa",
           "title": "Register",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Register with valid credentials (example #1)",
               "fullTitle": "Register Register with valid credentials (example #1)",
               "timedOut": null,
-              "duration": 12212,
+              "duration": 12225,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "91b531e2-3ab0-4120-a123-8ba9e89a38ad",
-              "parentUUID": "df8d1aef-8413-48f4-8a3b-e9cb4c24852c",
+              "uuid": "0ad3a153-787f-47df-8748-d7ea16b7a529",
+              "parentUUID": "7b07b991-554b-40a2-b9c2-07fd0b95a8fa",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "91b531e2-3ab0-4120-a123-8ba9e89a38ad"
+            "0ad3a153-787f-47df-8748-d7ea16b7a529"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12212,
+          "duration": 12225,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
