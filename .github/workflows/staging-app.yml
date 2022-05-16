@@ -69,7 +69,7 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  report:
+  notification:
     runs-on: ubuntu-latest
     needs: [install, cypress-run]
     steps:
@@ -80,18 +80,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14
-
-      - name: Merge JSON 📝
-        run: yarn mocha:merge 
-
-      - name: Create report 📝
-        run: yarn mocha:marge:ci
-
-      - name: Publish report 📈
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./cypress/results/mochawesome
 
       - name: Telegram notification 🔔
         uses: appleboy/telegram-action@master
@@ -107,5 +95,5 @@ jobs:
             
             <b>See changes:</b> <a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">here</a>
 
-            <b>See report:</b> <a href="https://vhonorato.github.io/ex_mod_22/">here</a>
+            <b>See dashboard:</b> <a href="https://dashboard.cypress.io/projects/fgunw9/">here</a>
 
