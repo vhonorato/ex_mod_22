@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install dependencies
+      - name: Install dependencies 📦
         run: yarn install --frozen-lockfile --non-interactive
 
       - name: Install 📦
