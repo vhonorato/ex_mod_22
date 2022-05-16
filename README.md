@@ -1,4 +1,5 @@
 # Module 22
+[![ex_mod_22](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/fgunw9&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/fgunw9/runs)
 
 Project developed for the course [Profession: Software Quality Engineer](https://ebaconline.com.br/engenheiro-de-qualidade)
 
