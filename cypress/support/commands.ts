@@ -91,12 +91,12 @@ Cypress.Commands.add(
 
 Cypress.Commands.add('chooseItem', () => {
   const fd = new FormData()
-  fd.append('attribute_size', ' XL')
+  fd.append('attribute_size', ' L')
   fd.append('attribute_color', ' Red')
   fd.append('quantity', ' 1')
   fd.append('add-to-cart', ' 2559')
   fd.append('product_id', ' 2559')
-  fd.append('variation_id', ' 2579')
+  fd.append('variation_id', ' 2570')
 
   cy.request({
     url: '/product/abominable-hoodie/',
